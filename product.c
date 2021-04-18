@@ -29,7 +29,7 @@ int readProduct(Product p)
 int updateProduct(Product *p)
 {
 
-	fgetc(stdin);
+	fgetc(stdin); // this line is to get rid of the newline character once enter is pressed by the user when navigating the menu
 	printf("제품의 이름은? ");
 	fgets(p->name,100,stdin);
 	p->name[strlen(p->name)-1]='\0';
