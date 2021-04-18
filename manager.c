@@ -73,7 +73,7 @@ int selectProductno(Product *p[],int count){
 	scanf("%d",&no);
 	return no;
 }
-void readFile(Product *p[], int *count){
+void readFile(Product *p[], int *count){ // used pointer so it can directly change the count variable 
 	FILE *fp;
 	int n=0;
 	fp = fopen("product.txt","rt");
@@ -88,7 +88,7 @@ void readFile(Product *p[], int *count){
 		      	if(result<1) break;
 			n++;
 		}
-		*count=n;
+		*count=n; // used pointer so it can directly change the count variable 
 		printf("===> 로딩성공! \n");
 	}
 }
