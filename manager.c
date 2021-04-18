@@ -97,7 +97,8 @@ void saveFile(Product *p[],int count){
 	fp = fopen("product.txt","wt");
 	for(int i=0;i<count;i++){
 		if(p[i]==NULL) continue;
-		fprintf(fp,"%s %d %d %d %d\n",p[i]->name, p[i]->weight,p[i]->price, p[i]->star,p[i]->numstar);
+		fprintf(fp,"%s %d %d %d %d",p[i]->name, p[i]->weight,p[i]->price, p[i]->star,p[i]->numstar);
+		fprintf(fp,"\n");
 	}
 	fclose(fp);
 	printf("===> 저장됨!\n");
